@@ -450,6 +450,44 @@ Es posible construir aplicaciones mediante `shiny`
 
 `shiny` genera de manera sencilla una aplicación que incopora html, javascript y css
 
+--
+
+Se estructura sobre la base de dos funciones: 
+
+- ui: interfaz de usuario
+
+- server: procesa la información
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+
+# Revisando el hardware
+
+A veces, puede ser necesario revisar las características de una máquina y de R
+
+--
+
+Para mirar el número de CPUs
+
+```{r}
+library(parallel)
+detectCores()
+
+```
+
+Para mirar la versión de R
+
+```{r}
+version
+```
+
+
+### esto es del último cómmit
+
 ---
 Contenidos:
 De la primera sesión de R en EPF (lenguaje interpretado, etc.)
