@@ -1,0 +1,96 @@
+options(scipen = "999")
+
+library(readr);library(tidyverse);library(furrr)
+direc <- "C:/Users/klehm/Instituto Nacional de Estadisticas/Subdepartamento de Estadísticas Socioeconómicas - RRAA EPF/IGI 2020/Explora RRAA INE/"
+
+#Cargar tabla A02
+df <- read_delim(paste0(direc, "COTIZACIONES_TRAB_A02.txt"), delim = "\t")
+
+
+
+#Editar nombre de variables
+names(df) <- tolower(names(df))
+
+#Revisar tipo de variables
+map(df, class) #tipo de variable en orden
+
+#Revisar si existen NA en la base.
+map(df, function(x) {sum(is.na(x))}) #no hay NAs
+map(df, function(x) {sum(is.nan(x))}) #no hay NAs
+
+
+#Mirar los identificadores
+df %>%
+  select(id_per, id_trabajor) %>%
+  slice(1:10)
+
+length(unique(df$id_per)) # 39 se repite para todos
+length(unique(df$id_trabajor)) # tiene casos repetidos
+
+#Explorar casos repetidos
+df <- df %>%
+  group_by(id_trabajor) %>%
+  mutate(n = n())
+
+#puede haber más de una declaración por trabajador
+#df %>%
+#  filter(n > 1) %>%
+#  View()
+
+#Generar id alternativo
+#df <- df %>%
+ # mutate(new_id = paste0(id_trabajor, identificacion_decla))
+
+#length(unique(df$new_id)) este identificador es único
+
+#Tabular algunas variables categóricas
+prop.table(table(df$tipo_trabajador))*100 #se indica que el porcentaje mayoritario es de trabajadores independientes
+table(df$tipo_declaracion) #tiene solo ceros
+table(df$estado_cotiz) #solo tiene ceros
+table(df$nacionalidad) # tiene solo ceros
+table(df$tipo_canal_cotiz) #solo tiene ceros
+table(df$num_dias_trabajados) #sin problemas
+table(df$tipo_pago) #solo tiene ceros
+table(df$anno) #sin problemas
+table(df$mes) #sin problemas
+
+#Variables continuas
+summary(df$monto_remuneracion)
+summary(df$monto_cotizacion)
+
+#Chequear número de registros con valor igual a 0
+df %>%
+  filter(monto_remuneracion == 0) %>%
+  nrow(.) #hay 1576 valores en 0
+
+#Generar histograma de remuneraciones y cotizaciones
+df %>%
+  slice(1:1000) %>%
+  filter(monto_remuneracion > 0) %>%
+  ggplot(aes(x = monto_remuneracion )) +
+  geom_histogram(bins = 100) +
+  scale_x_continuous(limits = c(0, 5000000))
+
+# Mirar ingresos entre 1.5 y 2 millones
+df %>%
+  distinct( id_trabajor, .keep_all = T) %>%
+  ggplot(aes(x = monto_remuneracion )) +
+    geom_histogram(bins = 100) +
+    scale_x_continuous(limits = c(0, 5000000))
+
+
+
+dias <- sort(unique(df$num_dias_trabajados))
+names(dias) <- paste0( "ndias", c(0:31))
+
+plots <- map(dias, function(x, data) {
+  data %>%
+    filter(num_dias_trabajados == x) %>%
+    ggplot(aes(x = monto_remuneracion )) +
+    geom_histogram(bins = 100) +
+    scale_x_continuous(limits = c(0, 5000000))
+}, df )
+
+
+
+
