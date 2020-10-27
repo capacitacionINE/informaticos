@@ -429,9 +429,11 @@ El paquete permite generar un archivo html que contiene javascript y css.
 
 Se estructura a partir de 2 funciones principales:
 
-- ui
+- ui: interfaz de usuario 
 
-- server
+- server: procesa los datos 
+
+[]()
 
 ---
 
