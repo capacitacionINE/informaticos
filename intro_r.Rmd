@@ -251,7 +251,7 @@ Actualmente, es un lenguaje muy popular en el mundo académico y está tomando f
 
 
 .center[
-<img src="imagenes/industrias.PNG" width="430" />
+<img src="imagenes/industrias.png" width="430" />
 
 ]
 
