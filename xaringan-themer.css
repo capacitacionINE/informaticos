@@ -138,7 +138,7 @@ a, a > code {
 .inverse {
   background-color: var(--inverse-background-color);
   color: var(--inverse-text-color);
-  
+
 }
 .inverse h1, .inverse h2, .inverse h3 {
   color: var(--inverse-header-color);
@@ -289,7 +289,7 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   background-size: contain;
   position: absolute;
   bottom: 0em;
-  
+
   left: 0em;
   width: 1000px;
   height: 10px;
@@ -352,3 +352,33 @@ document
     el.innerHTML += '<div class="logo"></div>';
   });
 </script>
+
+/* Text format (agregadas IAJ) */
+
+.big-par { /*párrafo grande */
+  font-size: 55px;
+}
+
+.big-par-red { /*párrafo grande y rojo */
+  font-size: 55px;
+  color: #4a25db;
+}
+
+.biggest{ /*párrafo más grande */
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.medium-par { /* párrafo mediano*/
+font-size: 30px;
+}
+
+.medium-par-red { /* párrafo mediano*/
+font-size: 30px;
+color: #4a25db;
+}
+
+.pur { /* normal purpura*/
+color: #4a25db;
+}
+
