@@ -1,0 +1,95 @@
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+parallel::detectCores()
+install.packages("benchmarkme")
+version()
+version
+library(benchmarkme)
+get_ram()
+get_ram()
+version
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+library(gganimate)
+p <- ggplot(gapminder::gapminder, aes(gdpPercap, lifeExp,
+color = continent)) +
+geom_point(aes(size = pop), show.legend = FALSE) +
+scale_y_continuous(breaks = seq(20,90,10)) +
+scale_size(range = c(2,12)) +
+scale_x_log10() +
+transition_states(year) + #<<
+labs(title = 'Año: {closest_state}', x = 'pib p/c', y = 'esperanza de vida') + #<<
+theme(plot.title = element_text(hjust = 0.5))
+f <- function(n) {
+if (n<2) return(n)
+return(f(n-1) + f(n-2))
+}
+f(1)
+f(2)
+f(3)
+f(4)
+f(5)
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+library(rvest)
+library(RSelenium); library(wdman)
+version <- binman::list_versions("chromedriver")
+rD1 <- rsDriver(browser = "chrome", port = 4567L, geckover = NULL,
+chromever = version[[1]][1], iedrver = NULL, phantomver = NULL)
+remDr <- rD1[["client"]]
+remDr$maxWindowSize(winHand = "current")
+remDr$navigate("https://www.jumbo.cl/")
+webElem <- remDr$findElements(using = 'css selector', ".new-header-supermarket-button")
+webElem
+remDr$mouseMoveToLocation(webElement = webElem[[1]])
+webElem <- remDr$findElements(using = 'css selector', ".new-header-supermarket-button")
+remDr$mouseMoveToLocation(webElement = webElem[[1]])
+remDr$navigate("https://www.jumbo.cl/")
+webElem <- remDr$findElements(using = 'css selector', ".new-header-supermarket-button")
+remDr$mouseMoveToLocation(webElement = webElem[[1]])
+webelem_nodo_generico <- remDr$findElements(using = 'css selector', ".new-header-supermarket-dropdown-item-name")
+webelem_nodo_generico[[1]]$click()
+remDr$navigate("https://www.jumbo.cl/")
+webElem <- remDr$findElements(using = 'css selector', ".new-header-supermarket-button")
+remDr$mouseMoveToLocation(webElement = webElem[[1]])
+remDr$navigate("https://www.jumbo.cl/")
+webElem <- remDr$findElements(using = 'css selector', ".new-header-supermarket-button")
+remDr$mouseMoveToLocation(webElement = webElem[[1]])
+webelem_nodo_generico <- remDr$findElements(using = 'css selector', ".new-header-supermarket-dropdown-item-name")
+webelem_nodo_generico[[1]]$click()
+webelem_nodo_generico[[1]]
+remDr$navigate("https://www.jumbo.cl/")
+webElem <- remDr$findElements(using = 'css selector', ".new-header-supermarket-button")
+remDr$mouseMoveToLocation(webElement = webElem[[1]])
+webelem_nodo_generico <- remDr$findElements(using = 'css selector', ".new-header-supermarket-dropdown-item-name")
+remDr$mouseMoveToLocation(webElement = webelem_nodo_generico[[1]])
+webelem_nodo_generico[[1]]$click()
+remDr$navigate("https://www.jumbo.cl/")
+webElem <- remDr$findElements(using = 'css selector', ".new-header-supermarket-button")
+remDr$mouseMoveToLocation(webElement = webElem[[1]])
+webelem_nodo_generico <- remDr$findElements(using = 'css selector', ".new-header-supermarket-dropdown-item-name")
+remDr$mouseMoveToLocation(webElement = webelem_nodo_generico[[2]])
+webelem_nodo_generico[[2]]$click()
+precios <- remDr$findElements(using = 'css selector', "div.product-single-price-container" )
+precios[[1]]
+precios[[1]]$getElementText()
+precios$getElementsText()
+precios$getElementText()
+precios[[1]]$getElementText()
+precios[[2]]$getElementText()
+map(precios, getElementText)
+library(purrr)
+map(precios, getElementText)
+precios
+map(precios, .x$getElementText)
+map(precios, ~.x$getElementText)
+precios[[2]]$getElementText()
+remDr$close()
+rD1[["server"]]$stop()
+rD1 <- rsDriver(browser = "chrome", port = 4567L, geckover = NULL,
+chromever = version[[1]][1], iedrver = NULL, phantomver = NULL)
+remDr <- rD1[["client"]]
+remDr$navigate("https://www.jumbo.cl/")
+rD1 <- rsDriver(browser = "chrome", port = 4567L, geckover = NULL,
+chromever = version[[1]][1], iedrver = NULL, phantomver = NULL)
+remDr$close()

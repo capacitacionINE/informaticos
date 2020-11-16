@@ -1,0 +1,50 @@
+library(RSelenium); library(wdman)
+
+version <- binman::list_versions("chromedriver")
+
+
+rD1 <- rsDriver(browser = "chrome", port = 4567L, geckover = NULL,
+                chromever = version[[1]][1], iedrver = NULL, phantomver = NULL)
+remDr <- rD1[["client"]]
+
+
+remDr$maxWindowSize(winHand = "current")
+
+
+remDr$navigate("http://cencosud.paperless.cl/BoletaJumbo/")
+webElem <- remDr$findElements(using = 'css selector',
+                             "input")
+
+
+webElem[[1]]
+
+webElem$sendKeysToElement(list("123", key = "enter"))
+
+
+
+
+remDr$navigate("http://unimarc.paperless.cl/boletarendic/")
+remDr$maxWindowSize(winHand = "current")
+
+
+webElem <- remDr$findElement(using = 'css selector', "select")
+
+webElem$sendKeysToElement(list("Boleta Electrónica"))
+
+webElem <- remDr$findElements(using = 'css selector',
+                              "input")
+
+webElem[[1]]$sendKeysToElement(list("0000000"))
+webElem[[2]]$sendKeysToElement(list("10-10-2020"))
+webElem[[3]]$sendKeysToElement(list("23000"))
+
+
+webElem <- remDr$findElements(using = 'css selector',
+                                                   "iframe")
+
+
+webElem[[1]]
+
+remDr$close()
+rD1[["server"]]$stop()
+
