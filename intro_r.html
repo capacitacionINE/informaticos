@@ -1,20 +1,15 @@
----
-title: "Introducción R para SDTI"
-subtitle: ""  
-author: "PE SSCC - Fase 5"
-date: '`r Sys.Date()`'
-output:
-  xaringan::moon_reader:
-    seal: false
-    lib_dir: libs
-    css: xaringan-themer.css
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
-#![](imagenes/logo_portada2.PNG)
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Introducción R para SDTI</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="PE SSCC - Fase 5" />
+    <meta name="date" content="2020-11-16" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
 
----
 
 
 class: center, middle
@@ -23,7 +18,7 @@ class: center, middle
 .linea-inferior[]
 
 
-<img src="imagenes/logo_portada2.png" width="200" />
+&lt;img src="imagenes/logo_portada2.png" width="200" /&gt;
 
 
 ## Introducción a R
@@ -34,19 +29,9 @@ class: center, middle
 
 Klaus Lehmann e Ignacio Agloni
 
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(message = FALSE) 
-```
 
-```{r xaringan-themer, include=FALSE, warning=FALSE}
-library(xaringanthemer)
-#style_duo_accent(
- # primary_color = "#1381B0",
-  #secondary_color = "#FF961C",
-  #inverse_header_color = "#FFFFFF"
-#)
-```
+
+
 
 
 ---
@@ -56,8 +41,8 @@ background-position: 100% 0%
 
 # Objetivos de la presentación
 
-<br>
-<br>
+&lt;br&gt;
+&lt;br&gt;
 
 --
 
@@ -94,7 +79,7 @@ background-position: 100% 0%
 # Contenidos de la presentación
 
 --
-<br/>
+&lt;br/&gt;
 
 - Presentación general del .pur[Proyecto Estratégico Servicios Compartidos para la Producción Estadística]
 
@@ -139,8 +124,8 @@ background-position: 100% 0%
 
 --
 
-<br/>
-<br/>
+&lt;br/&gt;
+&lt;br/&gt;
 
 .center[.medium-par[**Objetivo del proyecto**:]]
 
@@ -155,7 +140,7 @@ background-position: 100% 0%
 
 --
 .center[
-<img src="imagenes/sscc_estructura.PNG" width="700" />
+&lt;img src="imagenes/sscc_estructura.PNG" width="700" /&gt;
 ]
 
 ---
@@ -166,11 +151,11 @@ background-position: 100% 0%
 # PE SSCC - Planificación 2020-2021
 
 --
-<br/>
-<br/>
+&lt;br/&gt;
+&lt;br/&gt;
 
 .center[
-<img src="imagenes/sscc_planificacion.PNG" width="800" />
+&lt;img src="imagenes/sscc_planificacion.PNG" width="800" /&gt;
 ]
 
 ---
@@ -181,8 +166,8 @@ background-position: 100% 0%
 # R, Automatización y Ciencia de datos
 
 --
-<br/>
-<br/>
+&lt;br/&gt;
+&lt;br/&gt;
 
 .center[
 .medium-par[¿Alguna/o de ustedes tiene experiencia con `R`?]
@@ -216,12 +201,12 @@ background-position: 100% 0%
 Durante los últimos años, las herramientas más comunmente utilizadas en la SDT han sido STATA y SAS.
 
 .pull-left[
-<img src="imagenes/logo_stata.png" width="200" />
+&lt;img src="imagenes/logo_stata.png" width="200" /&gt;
 
 ]
 
 .pull-right[
-<img src="imagenes/logo_sas.png" width="200" />
+&lt;img src="imagenes/logo_sas.png" width="200" /&gt;
 
 ]
 
@@ -262,7 +247,7 @@ background-position: 100% 0%
 ### Python podría ser una buena alternativa 
 
 .center[
-<img src="imagenes/logo_python.png" width="200" />
+&lt;img src="imagenes/logo_python.png" width="200" /&gt;
 ]
 
 
@@ -289,7 +274,7 @@ background-position: 100% 0%
 
 
 .center[
-<img src="imagenes/logos_sistemas.PNG" width="350" />
+&lt;img src="imagenes/logos_sistemas.PNG" width="350" /&gt;
 
 ]
 
@@ -301,11 +286,11 @@ Tanto R como RStudio (IDE) son gratuitos.
 --
 
 .pull-left[
-<img src="imagenes/r_logo.PNG" width="120" />
+&lt;img src="imagenes/r_logo.PNG" width="120" /&gt;
 ]
 
 .pull-right[
-<img src="imagenes/rstudio_logo.PNG" width="250" />
+&lt;img src="imagenes/rstudio_logo.PNG" width="250" /&gt;
 
 ]
 
@@ -336,7 +321,7 @@ Con el tiempo su uso se ha ido extendiendo a otras áreas: medicina, ciencia pol
 --
 
 .center[
-<img src="imagenes/avance_r.PNG" width="450" />
+&lt;img src="imagenes/avance_r.PNG" width="450" /&gt;
 
 ]
 
@@ -355,7 +340,7 @@ Actualmente, es un lenguaje muy popular en el mundo académico y está tomando f
 
 
 .center[
-<img src="imagenes/industrias.png" width="430" />
+&lt;img src="imagenes/industrias.png" width="430" /&gt;
 
 ]
 
@@ -480,7 +465,7 @@ El más popular es `RStudio`
 --
 
 .center[
-<img src="imagenes/interfaz_rstudio.PNG" width="700" />
+&lt;img src="imagenes/interfaz_rstudio.PNG" width="700" /&gt;
 
 ]
 
@@ -527,7 +512,7 @@ background-position: 100% 0%
 Muchos usuarios suben sus paquetes a github o gitlab.
 
 .center[
-<img src="imagenes/logos_github_gitlab.PNG" width="250" />
+&lt;img src="imagenes/logos_github_gitlab.PNG" width="250" /&gt;
 
 ]
 
@@ -554,7 +539,7 @@ Esto impide, por ejemplo, descargar un [paquete](https://github.com/michael-cw/S
 ]
 
 .pull-right[
-<img src="imagenes/logo_survey_solutions.PNG" width="200" />
+&lt;img src="imagenes/logo_survey_solutions.PNG" width="200" /&gt;
 
 ]
 
@@ -567,7 +552,7 @@ background-position: 100% 0%
 # Plataformas git en procesamiento 
 
 --
-<br/>
+&lt;br/&gt;
 
 En el marco del PE SSCC se está estudiando la .pur[implementación de plataformas git para el procesamiento y análisis de datos].
 
@@ -598,13 +583,15 @@ background-position: 100% 0%
 
 Paquetes que están en CRAN.
 
-```{r, eval=FALSE}
+
+```r
 install.packages("tidyverse")
 ```
 
 --
 
-```{r, eval=FALSE}
+
+```r
 library(tidyverse)
 ```
 
@@ -612,7 +599,8 @@ library(tidyverse)
 
 Paquetes fuera de CRAN.
 
-```{r, eval=FALSE}
+
+```r
 library(devtools)
 install_github("Klauslehmann/calidad")
 ```
@@ -632,16 +620,17 @@ background-position: 100% 0%
 
 Instalación de versiones anteriores de un paquete.
 
-```{r, eval=FALSE}
-devtools::install_version("ggplot2", version = "0.9.1", repos = "http://cran.us.r-project.org")
 
+```r
+devtools::install_version("ggplot2", version = "0.9.1", repos = "http://cran.us.r-project.org")
 ```
 
 --
 
 Para instalar paquetes precompilados.
 
-```{r, eval=FALSE}
+
+```r
 install.binaries("ggplot2")
 ```
 
@@ -678,8 +667,9 @@ Para hacer la conexión, la opción más sencilla es autenticar mediante la cuen
 
 --
 
-```{r, eval=FALSE}
-con <- odbcDriverConnect('driver={SQL Server};server=BUVMSQLWINP01\\EXPLOT;database=ENE_ZERO;trusted_connection=true<encoding = latin1')
+
+```r
+con &lt;- odbcDriverConnect('driver={SQL Server};server=BUVMSQLWINP01\\EXPLOT;database=ENE_ZERO;trusted_connection=true&lt;encoding = latin1')
 ```
 
 
@@ -702,10 +692,10 @@ Se genera un problema cuando queremos trabajar desde el RServer (CentOS).
 
 En estos casos, accedemos mediante un usuario creado en la base de datos.
 
-```{r, eval=FALSE}
-library(RODBC)
-con <- odbcDriverConnect('driver=ODBC Driver 11 for SQL Server;server=buvmsqlwinp04\\RRAA,58550;database=SUPERINTENDENCIA_2; uid=****; pwd=*******')
 
+```r
+library(RODBC)
+con &lt;- odbcDriverConnect('driver=ODBC Driver 11 for SQL Server;server=buvmsqlwinp04\\RRAA,58550;database=SUPERINTENDENCIA_2; uid=****; pwd=*******')
 ```
 
 --
@@ -713,7 +703,8 @@ con <- odbcDriverConnect('driver=ODBC Driver 11 for SQL Server;server=buvmsqlwin
 Podemos consultar la base de datos usando directamente código de SQL.
 
 
-```{r, eval=FALSE}
+
+```r
 query = sqlQuery(con, 'SELECT TOP 10 * FROM SUPERINTENDENCIA_2.dbo.COTIZACIONES_TRAB_A02') 
 ```
 
@@ -729,22 +720,21 @@ También es posible hacer consultas con código de `R`, mediante `dbplyr`.
 
 --
 
-```{r, eval=FALSE}
+
+```r
 library(dbplyr)
-con <- DBI::dbConnect(RSQLite::SQLite(), "driver=ODBC Driver 11 for SQL Server;server=buvmsqlwinp04\\RRAA,58550;database=SUPERINTENDENCIA_2; uid=****; pwd=*******")
+con &lt;- DBI::dbConnect(RSQLite::SQLite(), "driver=ODBC Driver 11 for SQL Server;server=buvmsqlwinp04\\RRAA,58550;database=SUPERINTENDENCIA_2; uid=****; pwd=*******")
 
 copy_to(con, query, "query2")
-query2 <- tbl(con, "query2")
+query2 &lt;- tbl(con, "query2")
 
-media <- query2 %>% #<<
-  group_by(anio) %>% #<< 
-  summarise(media = mean(ID_trabajor, na.rm = TRUE)) %>% #<<
-  select(media) #<<
+*media &lt;- query2 %&gt;%
+* group_by(anio) %&gt;%
+* summarise(media = mean(ID_trabajor, na.rm = TRUE)) %&gt;%
+* select(media)
 
-media %>% 
+media %&gt;% 
   collect()
-
-
 ```
 
 --
@@ -762,7 +752,7 @@ El paquete `dbplyr` traduce la sintaxis de `dplyr` a SQL.
 
 
 .pull-right[
-<img src="https://media.giphy.com/media/3o7buirYcmV5nSwIRW/giphy.gif" width="200" />
+&lt;img src="https://media.giphy.com/media/3o7buirYcmV5nSwIRW/giphy.gif" width="200" /&gt;
 ]
 
 
@@ -783,7 +773,7 @@ Es un conjunto de paquetes que comparten **una filosofía, una sintaxis y una ma
 
 
 .center[
-<img src="imagenes/paquetes.PNG" width="600" />
+&lt;img src="imagenes/paquetes.PNG" width="600" /&gt;
 ]
 
 ---
@@ -812,7 +802,7 @@ El paquete `dplyr` es el corazón de `tidyverse` y la principal herramienta para
 
 
 .pull-left[
-<img src="imagenes/alicate2.PNG" width="230" />
+&lt;img src="imagenes/alicate2.PNG" width="230" /&gt;
 ]
 
 .pull-right[
@@ -855,29 +845,28 @@ background-position: 100% 0%
 
 # R y webscraping
 
-```{r, eval=F, message=F}
-library(RSelenium); library(wdman);library(tidyverse)
-version <- binman::list_versions("chromedriver")
 
-rD1 <- rsDriver(browser = "chrome", port = 4567L, geckover = NULL, #4567
+```r
+library(RSelenium); library(wdman);library(tidyverse)
+version &lt;- binman::list_versions("chromedriver")
+
+rD1 &lt;- rsDriver(browser = "chrome", port = 4567L, geckover = NULL, #4567
                 chromever = version[[1]][2], iedrver = NULL, phantomver = NULL)
-remDr <- rD1[["client"]]
+remDr &lt;- rD1[["client"]]
 
 remDr$navigate("https://www.jumbo.cl")
 remDr$maxWindowSize(winHand = "current")
 
-webelem_cat_super <- remDr$findElements(using = 'css selector', ".new-header-supermarket-button")
+webelem_cat_super &lt;- remDr$findElements(using = 'css selector', ".new-header-supermarket-button")
 remDr$mouseMoveToLocation(webElement = webelem_cat_super[[1]])
 
-webelem_nodo_generico <- remDr$findElements(using = 'css selector', ".new-header-supermarket-dropdown-item-name")
+webelem_nodo_generico &lt;- remDr$findElements(using = 'css selector', ".new-header-supermarket-dropdown-item-name")
 remDr$mouseMoveToLocation(webElement = webelem_nodo_generico[[2]])
 
 webelem_nodo_generico[[2]]$click()
 
-precios <- remDr$findElements(using = "css selector", ".product-single-price-container")
+precios &lt;- remDr$findElements(using = "css selector", ".product-single-price-container")
 map_chr(precios,   ~.x$getElementText()[[1]]) 
-
-
 ```
 
 
@@ -899,18 +888,19 @@ Esta presentación es un archivo html generado con un paquete llamado `rmarkdown
 
 --
 
-```{html, eval = F}
-<script>
+
+```html
+&lt;script&gt;
 slideshow._releaseMath = function(el) {
   var i, text, code, codes = el.getElementsByTagName('code');
-  for (i = 0; i < codes.length;) {
+  for (i = 0; i &lt; codes.length;) {
     code = codes[i];
-    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+    if (code.parentNode.tagName !== 'PRE' &amp;&amp; code.childElementCount === 0) {
       text = code.textContent;
       if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
           /^\$\$(.|\s)+\$\$$/.test(text) ||
           /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
-        code.outerHTML = code.innerHTML;  // remove <code></code>
+        code.outerHTML = code.innerHTML;  // remove &lt;code&gt;&lt;/code&gt;
         continue;
       }
     }
@@ -918,7 +908,7 @@ slideshow._releaseMath = function(el) {
   }
 };
 slideshow._releaseMath(document);
-</script>
+&lt;/script&gt;
 
 ```
 
@@ -930,7 +920,7 @@ background-position: 100% 0%
 # rmarkdown 
 
 --
-<br/>
+&lt;br/&gt;
 
 Es un paquete que está siendo utilizado de manera intensiva en la SDT para generar reportes 
 
@@ -1025,22 +1015,7 @@ Es posible generar visualizaciones animadas
 
 --
 
-```{r, echo=F, fig.align='center', warning=F, message=F}
-library(gganimate)
-p <- ggplot(gapminder::gapminder, aes(gdpPercap, lifeExp, 
-                           color = continent)) +
-  geom_point(aes(size = pop), show.legend = FALSE) +
-  scale_y_continuous(breaks = seq(20,90,10)) +
-  scale_size(range = c(2,12)) + 
-  scale_x_log10() +
-  transition_states(year) + #<< 
-  labs(title = 'Año: {closest_state}', x = 'pib p/c', y = 'esperanza de vida') + #<<
-  theme(plot.title = element_text(hjust = 0.5))
-
-animate(p, renderer = gifski_renderer(), fps=10)
-
-
-```
+&lt;img src="intro_r_files/figure-html/unnamed-chunk-12-1.gif" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1079,7 +1054,7 @@ Ya hemos visto que podemos usar código de SQL sin mayores problemas
 Mediante el paquete `reticulate` es posible cargar el intérprete de python y generar flujos de trabajo integrados de python y R
 
 
-.center[<img src="imagenes/logo_reticulate.jpg" width="230" />]
+.center[&lt;img src="imagenes/logo_reticulate.jpg" width="230" /&gt;]
 
 --
 
@@ -1095,7 +1070,8 @@ background-position: 100% 0%
 
 El paquete `Rcpp` permite usar código de C++
 
-```{r, eval=FALSE}
+
+```r
 library(Rcpp)
 cppFunction('int add(int x, int y, int z) {
   int sum = x + y + z;
@@ -1103,7 +1079,6 @@ cppFunction('int add(int x, int y, int z) {
 }')
 
 add(1, 2, 3)
-
 ```
 
 
@@ -1134,16 +1109,39 @@ A veces, puede ser necesario revisar las características de una máquina y de R
 
 Para mirar el número de CPUs
 
-```{r}
+
+```r
 library(parallel)
 detectCores()
+```
 
+```
+## [1] 8
 ```
 
 Para mirar la versión de R
 
-```{r}
+
+```r
 version
+```
+
+```
+##                _                           
+## platform       x86_64-w64-mingw32          
+## arch           x86_64                      
+## os             mingw32                     
+## system         x86_64, mingw32             
+## status                                     
+## major          4                           
+## minor          0.2                         
+## year           2020                        
+## month          06                          
+## day            22                          
+## svn rev        78730                       
+## language       R                           
+## version.string R version 4.0.2 (2020-06-22)
+## nickname       Taking Off Again
 ```
 
 
@@ -1179,7 +1177,7 @@ Instalar Rstudio Server
     - wget https://download2.rstudio.org/server/centos6/x86_64/rstudio-server-rhel-1.2.5019-x86_64.rpm
     - yum install --nogpgcheck rstudio-server-rhel-1.2.5019-x86_64.rpm -y
     - systemctl status rstudio-server.service; systemctl enable rstudio-server.service
-    - firewall-cmd --permanent --zone=public --add-port=8787/tcp && firewall-cmd --reload
+    - firewall-cmd --permanent --zone=public --add-port=8787/tcp &amp;&amp; firewall-cmd --reload
 
 
 
@@ -1288,7 +1286,7 @@ class: center, middle
 
 .linea-superior[]
 .linea-inferior[]
-<img src="imagenes/logo_portada2.png" width="200" />
+&lt;img src="imagenes/logo_portada2.png" width="200" /&gt;
 
 
 ## Introducción a R
@@ -1298,3 +1296,126 @@ class: center, middle
 ## 
 
 ### Noviembre 2020
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

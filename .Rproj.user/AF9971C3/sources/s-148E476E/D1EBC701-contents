@@ -510,23 +510,10 @@ Entrar a CRAN requiere cumplir con ciertos estándares de calidad.
 
 --
 
-.red[La configuración de proxy del INE impide descargar paquetes de CRAN] 
+.red[Hasta hace poco la configuración de proxy del INE impidedía descargar paquetes de CRAN] 
 
-.red[Es necesario desactivar una función en RStudio] 
+.red[Era necesario desactivar una función en RStudio] 
 
-
-
----
-background-image: url("imagenes/fondo2.PNG")
-background-size: contain;
-background-position: 100% 0%
-
-# Paquetes (librerías) en R
-
-.center[
-<img src="imagenes/pantallazo_r.PNG" width="550" />
-
-]
 
 ---
 background-image: url("imagenes/fondo2.PNG")
@@ -856,7 +843,7 @@ R nos permite trabajar con datos web mediante algunos paquetes
 
 - httr
 
--- 
+--
 
 RSelenium es una gran herramienta para interactuar con los navegadores
 
