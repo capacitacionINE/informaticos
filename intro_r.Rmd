@@ -267,6 +267,7 @@ background-position: 100% 0%
 
 También es gratuito.
 
+
 --
 
 Es un lenguaje .pur[multiparadigma] que podría ser .pur[compartido por SDT y SDTI].
@@ -361,6 +362,100 @@ Actualmente, es un lenguaje muy popular en el mundo académico y está tomando f
 --
 
 ### Compite con Python en el campo de la ciencia de datos.
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# ¿Por qué transitar a R en la SDT?
+
+Es gratuito
+
+--
+
+Es muy útil en dos campos
+
+- Automatización del procesamiento estadístico
+
+- Tareas relacionadas con ciencia de datos
+
+
+--
+
+**Procesamiento**
+
+- IDE muy eficiente y fácil de usar
+
+--
+
+- Integración sencilla con git
+
+--
+
+- Soluciones para tareas muy específicas (desarrollo de paquetes)
+
+--
+
+- Integración sencilla con otros lenguajes (python y SQL) 
+
+--
+
+- Automatización de reportes
+
+--
+
+- Manejo sencillo de distintos formatos de archivo (dta, sav, xlsx, csv, tab)
+
+--
+
+- Paralelización de procesos costosos
+
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# ¿Por qué transitar a R en la SDT?
+
+**Ciencia de datos**
+
+- Procesamiento de texto e imágenes
+
+--
+
+- Machine learning 
+
+--
+
+- Incoporación rápida de avances estadísticos
+
+--
+
+- Muy buena visualización 
+
+--
+
+**También existen algunas desventajas**
+
+- Requiere analistas con mayores habilidades de programación 
+
+--
+
+- Requiere establecer ciertos estándares
+
+--
+
+- No cuenta con las mejores librerías para *deep learning*
+
+--
+
+- No es un lenguaje multipropósito, como python o java.  
+
+
 
 ---
 background-image: url("imagenes/fondo2.PNG")
