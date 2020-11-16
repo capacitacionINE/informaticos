@@ -32,6 +32,7 @@ class: center, middle
 
 ### Noviembre 2020
 
+Klaus Lehmann e Ignacio Agloni
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -839,11 +840,11 @@ background-position: 100% 0%
 
 # R y webscraping
 
-Las fuentes de información para las estadísticas oficiales se está diversificando
+Las fuentes de información para las estadísticas oficiales se están diversificando
 
 --
 
-La información web se está volviendo cada vez más relevante
+La información web se torna cada vez más relevante
 
 --
 
@@ -853,13 +854,26 @@ R nos permite trabajar con datos web mediante algunos paquetes
 
 - RSelenium
 
+- httr
 
-```{r}
-library(RSelenium); library(wdman)
+-- 
+
+RSelenium es una gran herramienta para interactuar con los navegadores
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# R y webscraping
+
+```{r, eval=F, message=F}
+library(RSelenium); library(wdman);library(tidyverse)
 version <- binman::list_versions("chromedriver")
 
-rD1 <- rsDriver(browser = "chrome", port = 4567L, geckover = NULL,
-                chromever = version[[1]][3], iedrver = NULL, phantomver = NULL)
+rD1 <- rsDriver(browser = "chrome", port = 4567L, geckover = NULL, #4567
+                chromever = version[[1]][2], iedrver = NULL, phantomver = NULL)
 remDr <- rD1[["client"]]
 
 remDr$navigate("https://www.jumbo.cl")
@@ -872,6 +886,9 @@ webelem_nodo_generico <- remDr$findElements(using = 'css selector', ".new-header
 remDr$mouseMoveToLocation(webElement = webelem_nodo_generico[[2]])
 
 webelem_nodo_generico[[2]]$click()
+
+precios <- remDr$findElements(using = "css selector", ".product-single-price-container")
+map_chr(precios,   ~.x$getElementText()[[1]]) 
 
 
 ```
@@ -1054,7 +1071,7 @@ Podemos usar de manera sencilla código de javascript para generar visualizacion
 
 --
 
-Como pueden ver, `R` está acercando herramientas de visualización a los analistas técnicos, permitiéndoles .pur[desarrollar sus propias visualizaciones sin necesidad de edición para llegar al usuacio final].
+`R` está acercando herramientas de visualización a los analistas técnicos, permitiéndoles .pur[desarrollar sus propias visualizaciones sin necesidad de edición para llegar al usuario final].
 
 --
 
@@ -1091,6 +1108,16 @@ background-position: 100% 0%
 
 El paquete `Rcpp` permite usar código de C++
 
+```{r, eval=FALSE}
+library(Rcpp)
+cppFunction('int add(int x, int y, int z) {
+  int sum = x + y + z;
+  return sum;
+}')
+
+add(1, 2, 3)
+
+```
 
 
 
@@ -1100,7 +1127,7 @@ Podemos usar C++, para crear funciones de R más eficientes
 
 --
 
-Última alternativa cuando las funciones existentes no son suficientmente veloces
+Última alternativa cuando las funciones existentes no son suficientemente veloces
 
 ---
 
@@ -1137,35 +1164,8 @@ background-image: url("imagenes/fondo2.PNG")
 background-size: contain;
 background-position: 100% 0%
 
-# Administración de RStudio Server en Centos 7
+# RStudio Server en Centos 7
 
-
-
-### esto es del último cómmit
-
----
-Contenidos:
-De la primera sesión de R en EPF (lenguaje interpretado, etc.)
-Presentación del lenguaje R y de RStudio.
-Interfaz de RStudio.
-Gráfico lenguajes más populares Stockoverflow.
-Usos de R (nicho de estadísticas y ciencia de datos)
-Paquetes en R.
-Instalación de paquetes
-Cargar paquetes en la sesión
-Paquetes en CRAN
-Paquetes GitHub, Gitlab, Bitbucker.
-Formas de cargar paquetes.
-Panorama general de desarrollo de paquetes de R.
-Interacción de R con bases de datos.
-Mencionar dbplyr, sqlite.
-Sentencias para evaluar funcionalidad desde R.
-Chequear hardware (ram, número de procesadores)
-Aplicaciones html
-Características generales de shiny
-plotly
-Fecha tentativa clase:
-Última semana de octubre
 
 ---
 

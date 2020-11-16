@@ -3,7 +3,7 @@
     "path": "C:/INE/capacitacionine/informaticos/intro_r.Rmd",
     "project_path": "intro_r.Rmd",
     "type": "r_markdown",
-    "hash": "4200177017",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1605199529368.0,
@@ -11,16 +11,16 @@
     "relative_order": 1,
     "properties": {
         "tempName": "Untitled1",
-        "cursorPosition": "858,0",
-        "scrollLine": "845",
+        "cursorPosition": "25,17",
+        "scrollLine": "13",
         "last_setup_crc32": "148E476E65cc11b0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1605553564,
+    "lastKnownWriteTime": 1605556588,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1605553564122,
+    "last_content_update": 1605556588433,
     "read_only": false,
     "read_only_alternatives": []
 }
