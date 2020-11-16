@@ -264,7 +264,6 @@ background-position: 100% 0%
 <img src="imagenes/logo_python.png" width="200" />
 ]
 
-
 También es gratuito.
 
 --
@@ -361,6 +360,100 @@ Actualmente, es un lenguaje muy popular en el mundo académico y está tomando f
 --
 
 ### Compite con Python en el campo de la ciencia de datos.
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# ¿Por qué transitar a R en la SDT?
+
+Es gratuito
+
+--
+
+Es muy útil en dos campos
+
+- Automatización del procesamiento estadístico
+
+- Tareas relacionadas con ciencia de datos
+
+
+--
+
+**Procesamiento**
+
+- IDE muy eficiente y fácil de usar
+
+--
+
+- Integración sencilla con git
+
+--
+
+- Soluciones para tareas muy específicas (desarrollo de paquetes)
+
+--
+
+- Integración sencilla con otros lenguajes (python y SQL) 
+
+--
+
+- Automatización de reportes
+
+--
+
+- Manejo sencillo de distintos formatos de archivo (dta, sav, xlsx, csv, tab)
+
+--
+
+- Paralelización de procesos costosos
+
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# ¿Por qué transitar a R en la SDT?
+
+**Ciencia de datos**
+
+- Procesamiento de texto e imágenes
+
+--
+
+- Machine learning 
+
+--
+
+- Incoporación rápida de avances estadísticos
+
+--
+
+- Muy buena visualización 
+
+--
+
+**También existen algunas desventajas**
+
+- Requiere analistas con mayores habilidades de programación 
+
+--
+
+- Requiere establecer ciertos estándares
+
+--
+
+- No cuenta con las mejores librerías para *deep learning*
+
+--
+
+- No es un lenguaje multipropósito, como python o java.  
+
+
 
 ---
 background-image: url("imagenes/fondo2.PNG")
@@ -996,13 +1089,127 @@ background-image: url("imagenes/fondo2.PNG")
 background-size: contain;
 background-position: 100% 0%
 
-# Administración de RStudio Server en Centos 7
+# RStudio Server en Centos
 
+--
 
+Instalación de RStudio server en Centos
 
-### esto es del último cómmit
+- Comandos:
+
+    - yum update
+    - yum install epel-release (*Extra Packages for Enterprise Linux*)
+    - o	yum install wget htop
+
+--
+
+Instalar Rstudio Server
+
+--
+
+- Comandos:
+
+    - yum install R -y
+    - wget https://download2.rstudio.org/server/centos6/x86_64/rstudio-server-rhel-1.2.5019-x86_64.rpm
+    - yum install --nogpgcheck rstudio-server-rhel-1.2.5019-x86_64.rpm -y
+    - systemctl status rstudio-server.service; systemctl enable rstudio-server.service
+    - firewall-cmd --permanent --zone=public --add-port=8787/tcp && firewall-cmd --reload
 
 ---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# RStudio Server en Centos
+
+--
+
+- Crear Cuenta de Usuario para ingresar y revisar que levante el sitio de R
+
+    - Tomar en consideración que R no permite logearce con la cuenta root.
+    
+- http://URL:8787
+
+--
+
+Siguiente paso Instalar **Development Tools** (Se puede instalar por Linux o `R`)
+
+--
+
+- Comandos:
+
+    - yum groupinstall "Development Tools" -y
+    - sudo -i R
+    - install.packages('txtplot')
+    - q()
+
+--
+
+Instalación de Packetes en `R`
+
+- Para instalar tidyverse
+
+- yum install -y libcurl-devel openssl-devel libxml2-devel
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# RStudio Server en Centos
+
+--
+
+Luego en http://URL:8787 
+
+- ejecutar install.packages(tidyverse)
+
+- Revisar si se instaló library(tidyverse)
+
+
+.pur[Configuración pendiente]
+
+- Instalación de los paquetes en un solo repositorio con el objetivo de que se comparta con todos los perfiles y no ocupar disco.
+
+--
+
+Instalar el controlador ODBC de Microsoft 11
+
+- La versión de UnixODBC compatible con Microsoft ODBC Driver 11 es el UnixODBC-2.3.0.
+
+- Revisar la versión UnixODBC  instalada en Linux
+
+- Ejecutar siguiente comando en Linux isql –version (Si la versión es 2.3.1 hay que desinstalar, en caso de que sea la versión 2.3.0 esta okey).
+
+---
+
+background-image: url("imagenes/fondo2.PNG")
+background-size: contain;
+background-position: 100% 0%
+
+# RStudio Server en Centos
+
+--
+
+- desintalar UnixODBC 2.3.1
+
+    - yum remove unixODBC*
+    - yum erase unixODBC
+    - rpm -e unixODBC*
+    - rpm rpm -qa | grep unixODBC
+
+- Se debe descargar la versión compatible de UnixODBC de la siguiente ruta.
+
+    - http://www.unixodbc.org/unixODBC-2.3.0.tar.gz
+
+- Instalar	
+
+https://stackoverflow.com/questions/18531010/how-to-configure-microsoft-odbc-driver-11-for-sql-server-on-redhat-linux-with
+
+---
+### esto es del último cómmit
 Contenidos:
 De la primera sesión de R en EPF (lenguaje interpretado, etc.)
 Presentación del lenguaje R y de RStudio.
